@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container my-1">
+    <form class="search-location">
+      <input type="text" name="city" placeholder="Inserisci una città" autocomplete="off"
+        class="form-control text-muted text-center form-rounded p-4 shadow-sm">
+    </form>
+
+    <div class="card rounded my-3 shadow-lg back-card">
+      <div class="card-top text-center">
+        <div class="city-name my-3">
+          <p>Città</p>
+        </div>
+        <img src="img/day_image.svg" alt="" class="card-img-top time">
+      </div>
+
+      <div class="card-body">
+        <div class="card-mid row">
+          <div class="col-8 text-center temp">
+            <span>__°C</span>
+          </div>
+          <div class="col-4 condition-temp">
+            <p class="condition">Condizioni Meteo</p>
+            <p class="high">max_°C</p>
+            <p class="low">min_°C</p>
+          </div>
+        </div>
+
+        <div class="icon-container card shadow mx-auto">
+          <img src="img/geoloc.svg" click="displayWeather()" alt="" id="imgg">
+        </div>
+        
+        <div class="card-bottom px-5 py-4 row">
+          <div class="col text-center feel">
+            <p>_°C</p>
+            <span>Percepita</span>
+          </div>
+          <div class="col text-center umidity">
+            <p>_%</p>
+            <span>Umidità</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="request.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
